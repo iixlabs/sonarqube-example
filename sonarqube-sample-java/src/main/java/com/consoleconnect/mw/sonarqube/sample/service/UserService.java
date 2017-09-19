@@ -27,14 +27,6 @@ public class UserService {
 		user.setPassword(password);
 
 		email2User.put(email, user);
-		
-		/////
-		/////
-		////
-		while(true) {
-			
-		}
-
 		return user;
 	}
 }
