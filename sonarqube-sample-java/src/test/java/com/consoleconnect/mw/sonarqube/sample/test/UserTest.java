@@ -19,6 +19,8 @@ public class UserTest {
 
 	private static final String ID = UUID.randomUUID().toString();
 	private static User USER = new User(ID);
+	
+	
 
 	@Test
 	public void testId() {

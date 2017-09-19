@@ -13,6 +13,8 @@ public class User {
 	private String password;
 
 	private Collection<Role> roles;
+	
+	private int a;
 
 	public String getUsername() {
 		return username;
