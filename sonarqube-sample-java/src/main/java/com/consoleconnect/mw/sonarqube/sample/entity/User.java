@@ -14,8 +14,6 @@ public class User {
 
 	private Collection<Role> roles;
 	
-	private int a;
-
 	public String getUsername() {
 		return username;
 	}

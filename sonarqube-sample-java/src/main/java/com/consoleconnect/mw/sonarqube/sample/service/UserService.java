@@ -29,13 +29,6 @@ public class UserService {
 
 		email2User.put(email, user);
 
-		while(true) {
-			//do it
-		}
-		if (tmp.equals("tmp")) {
-			System.out.println("tmp is tmp");
-		}
-
 		return user;
 	}
 }
