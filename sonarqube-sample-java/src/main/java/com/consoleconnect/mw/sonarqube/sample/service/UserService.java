@@ -18,7 +18,6 @@ public class UserService {
 	private Map<String, User> email2User = new HashMap<String, User>();
 
 	public User create(String email, String password) {
-		String tmp;
 		if (email2User.containsKey(email)) {
 			throw new IllegalArgumentException(String.format("%s already exist", email));
 		}
@@ -28,6 +27,13 @@ public class UserService {
 		user.setPassword(password);
 
 		email2User.put(email, user);
+		
+		/////
+		/////
+		////
+		while(true) {
+			
+		}
 
 		return user;
 	}
