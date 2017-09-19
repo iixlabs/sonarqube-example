@@ -1,50 +1,25 @@
 package com.consoleconnect.mw.sonarqube.sample.entity;
 
-import java.util.Collection;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotEmpty;
-
-import lombok.Data;
-
-@Data
-@Entity
 public class Role {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
+	private final Long id;
 
-  @NotNull
-  @NotEmpty
-  private String name;
+	private String name;
 
+	public Role(Long id) {
+		super();
+		this.id = id;
+	}
 
-  @ManyToMany(mappedBy = "roles")
-  private Collection<User> users;
+	public String getName() {
+		return name;
+	}
 
-  @ManyToMany
-  @JoinTable(name = "roles_privileges",
-      joinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"),
-      inverseJoinColumns = @JoinColumn(name = "privilege_id", referencedColumnName = "id"))
-  private Collection<Privilege> privileges;
+	public void setName(String name) {
+		this.name = name;
+	}
 
-
-  public Role withName(String name) {
-    this.name = name;
-    return this;
-  }
-
-  public Role withPrivileges(Collection<Privilege> privileges) {
-    this.privileges = privileges;
-    return this;
-  }
+	public Long getId() {
+		return id;
+	}
 }

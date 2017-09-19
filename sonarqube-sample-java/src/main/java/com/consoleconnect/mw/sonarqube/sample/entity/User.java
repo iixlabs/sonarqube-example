@@ -2,69 +2,57 @@ package com.consoleconnect.mw.sonarqube.sample.entity;
 
 import java.util.Collection;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.NotEmpty;
-
-import lombok.Data;
-
-@Data
-@Entity
 public class User {
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
 
-  @NotNull
-  @NotEmpty
-  private String username;
-  @NotNull
-  @NotEmpty
-  private String email;
+	private final String id;
 
-  @NotNull
-  @NotEmpty
-  private String password;
+	private String username;
 
-  private boolean enabled;
-  private boolean tokenExpired;
+	private String email;
 
-  @ManyToMany
-  @JoinTable(name = "users_roles",
-      joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-      inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
-  private Collection<Role> roles;
+	private String password;
 
+	private Collection<Role> roles;
 
-  public User withId(long id) {
-    this.id = id;
-    return this;
-  }
+	public String getUsername() {
+		return username;
+	}
 
-  public User withEmail(String email) {
-    this.email = email;
-    return this;
-  }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-  public User withPassword(String password) {
-    this.password = password;
-    return this;
-  }
+	public String getEmail() {
+		return email;
+	}
 
-  public User withUsername(String username) {
-    this.username = username;
-    return this;
-  }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-  public User withRoles(Collection<Role> roles) {
-    this.roles = roles;
-    return this;
-  }
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Collection<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Collection<Role> roles) {
+		this.roles = roles;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public User(String id) {
+		super();
+		this.id = id;
+	}
+
 }
