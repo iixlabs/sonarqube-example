@@ -1,6 +1,7 @@
 /**
  * 
  */
+
 package com.consoleconnect.mw.sonarqube.sample.test;
 
 /**

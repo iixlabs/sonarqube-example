@@ -4,55 +4,55 @@ import java.util.Collection;
 
 public class User {
 
-	private final String id;
+  private final String id;
 
-	private String username;
+  private String username;
 
-	private String email;
+  private String email;
 
-	private String password;
+  private String password;
 
-	private Collection<Role> roles;
-	
-	public String getUsername() {
-		return username;
-	}
+  private Collection<Role> roles;
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+  public String getUsername() {
+    return username;
+  }
 
-	public String getEmail() {
-		return email;
-	}
+  public void setUsername(String username) {
+    this.username = username;
+  }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+  public String getEmail() {
+    return email;
+  }
 
-	public String getPassword() {
-		return password;
-	}
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+  public String getPassword() {
+    return password;
+  }
 
-	public Collection<Role> getRoles() {
-		return roles;
-	}
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-	public void setRoles(Collection<Role> roles) {
-		this.roles = roles;
-	}
+  public Collection<Role> getRoles() {
+    return roles;
+  }
 
-	public String getId() {
-		return id;
-	}
+  public void setRoles(Collection<Role> roles) {
+    this.roles = roles;
+  }
 
-	public User(String id) {
-		super();
-		this.id = id;
-	}
+  public String getId() {
+    return id;
+  }
+
+  public User(String id) {
+    super();
+    this.id = id;
+  }
 
 }
