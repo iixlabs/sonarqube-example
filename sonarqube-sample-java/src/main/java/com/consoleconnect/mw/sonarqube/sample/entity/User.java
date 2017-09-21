@@ -4,6 +4,8 @@ import java.util.Collection;
 
 public class User {
 
+  private int b;
+  
   private final String id;
 
   private String username;
