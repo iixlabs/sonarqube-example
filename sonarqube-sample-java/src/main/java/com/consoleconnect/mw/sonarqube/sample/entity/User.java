@@ -56,5 +56,10 @@ public class User {
     super();
     this.id = id;
   }
+  
+  public boolean testMe() {
+    System.out.println("Test me pls");
+    return true;
+  }
 
 }

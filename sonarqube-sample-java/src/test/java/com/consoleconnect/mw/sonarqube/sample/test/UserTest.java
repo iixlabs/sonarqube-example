@@ -34,4 +34,9 @@ public class UserTest {
     USER.setEmail("test@email.com");
     Assert.assertTrue(USER.getEmail().equals("test@email.com"));
   }
+  
+  @Test
+  public void testMe() {
+    Assert.assertTrue(USER.testMe());
+  }
 }
