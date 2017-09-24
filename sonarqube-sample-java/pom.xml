@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.consoleconnect.mw</groupId>
 		<artifactId>sonarqube-sample</artifactId>
-		<version>0.0.4</version>
+		<version>0.0.5</version>
 	</parent>
 	<artifactId>sonarqube-sample-java</artifactId>
 
